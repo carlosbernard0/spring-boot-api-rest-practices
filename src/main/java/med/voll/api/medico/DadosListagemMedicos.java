@@ -1,9 +1,9 @@
 package med.voll.api.medico;
 
 public record DadosListagemMedicos(
-        String nome, String email, String crm, Especialidade especialidade
+        Long id,String nome, String email, String crm, Especialidade especialidade
 ) {
     public DadosListagemMedicos(MedicoEntity medico){
-        this(medico.getNome(),medico.getEmail(),medico.getCrm(),medico.getEspecialidade());
+        this(medico.getId(),medico.getNome(),medico.getEmail(),medico.getCrm(),medico.getEspecialidade());
     }
 }
